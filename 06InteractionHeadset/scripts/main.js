@@ -18,9 +18,7 @@ myOtherBox.addEventListener('mouseenter', function(){
 });
 
 myOtherBox.addEventListener('mouseleave', function(){
-	myOtherBox.setAttribute("type","red");
 	rotationSpeed = 0.001;
-	
 	console.log('left');
 });
 
