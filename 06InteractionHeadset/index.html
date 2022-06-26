@@ -21,8 +21,13 @@
         </a-entity>
         <a-box cursor position="0 0 -1" 
                 scale="0.05 0.05 0.05"
-                material="color: yellow; shader: flat"></a-box>
-      </a-camera>
+                material="color: yellow; shader: flat"
+                animation__scale="property: scale;
+                dur:1200;
+                from: 0.052 0.052 0.052;
+                to: 0.038 0.038 0.038;
+                loop: true;" >
+              </a-box>
       
       <a-box id="myBox" 
         position="-1 1 -3" 
