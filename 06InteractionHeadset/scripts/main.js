@@ -1,6 +1,7 @@
 
 var rotationSpeed = 0.001;
 var myOtherBox = document.getElementById('myOtherBox');
+var fuseTimeout = document.getElementById('fuseTimeout');
 
 function spin(){
 	myOtherBox.object3D.rotation.x += rotationSpeed;
@@ -28,16 +29,23 @@ myOtherBox.addEventListener('mouseleave', function(){
  * click-events can use a fuse (default on mobile). So the event only fires, if the cursor is on the object for a specified time. 
  */
 
-// var growspeed = 1.4;
+var growspeed = 1.4;
 
-// function grow(){
-// 	myOtherBox.object3D.scale.x *= growspeed;
-// 	myOtherBox.object3D.scale.y *= growspeed;
-// 	myOtherBox.object3D.scale.z *= growspeed;
-// 	//console.log(myOtherBox.object3D.scale);
-// }
+function grow(){
+	myOtherBox.object3D.scale.x *= growspeed;
+	myOtherBox.object3D.scale.y *= growspeed;
+	myOtherBox.object3D.scale.z *= growspeed;
+	//console.log(myOtherBox.object3D.scale);
+}
 
-// myOtherBox.addEventListener('click', function(){ // uses a fuse
-// 	grow();
-// 	console.log('grew');
-// });
+myOtherBox.addEventListener('click', function(){ // uses a fuse
+	grow();
+	console.log('grew');
+});
+
+if (fuseTimeout>4000){
+	myOtherBox.object3D.scale.x *= growspeed*0.8;
+	myOtherBox.object3D.scale.y *= growspeed*0.8;
+	myOtherBox.object3D.scale.z *= growspeed*0.8;
+
+}
