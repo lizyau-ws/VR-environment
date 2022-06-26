@@ -18,7 +18,9 @@ myOtherBox.addEventListener('mouseenter', function(){
 });
 
 myOtherBox.addEventListener('mouseleave', function(){
+	myOtherBox.setAttribute("type","red");
 	rotationSpeed = 0.001;
+	
 	console.log('left');
 });
 
@@ -43,9 +45,4 @@ myOtherBox.addEventListener('click', function(){ // uses a fuse
 	console.log('grew');
 });
 
-if (fuseTimeout>4000){
-	myOtherBox.object3D.scale.x *= growspeed*0.8;
-	myOtherBox.object3D.scale.y *= growspeed*0.8;
-	myOtherBox.object3D.scale.z *= growspeed*0.8;
 
-}
