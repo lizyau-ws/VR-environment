@@ -19,12 +19,9 @@
         <a-entity id="mouseCursor"
           cursor="fuse: true; fuseTimeout: 1500">
         </a-entity>
-        <a-ring id="cursorRing" 
-          position="0 0 -1"
-          radius-inner= "0.02"
-          radius-outer= "0.03"
-          material="color: red; shader: flat">
-        </a-ring>
+        <a-box cursor position="0 0 -1" 
+                scale="0.05 0.05 0.05"
+                material="color: yellow; shader: flat"></a-box>
       </a-camera>
       
       <a-box id="myBox" 
