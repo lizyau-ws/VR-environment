@@ -6,6 +6,7 @@ function spin(){
 	myOtherBox.object3D.rotation.x += rotationSpeed;
 	myOtherBox.object3D.rotation.y += rotationSpeed;
 	myOtherBox.object3D.rotation.z += rotationSpeed/2;
+
 	//console.log(myOtherBox.object3D.rotation);
 }
 setInterval(spin, 10);
@@ -35,13 +36,13 @@ myBox.addEventListener('mouseleave', function(){
 var ggspeed = 0.05;
 
 function ggspeed(){
-	myOtherBox.object3D.rotation.x *= ggspeed;
-	myOtherBox.object3D.rotation.y *= ggspeed;
-	myOtherBox.object3D.rotation.z *= ggspeed/2;
+	myBox.object3D.rotation.x *= ggspeed;
+	myBox.object3D.rotation.y *= ggspeed;
+	myBox.object3D.rotation.z *= ggspeed/2;
 	console.log(myOtherBox.object3D.scale);
 }
 
-myOtherBox.addEventListener('click', function(){ // uses a fuse
+myBox.addEventListener('click', function(){ // uses a fuse
 	ggspeed();
 	console.log('gg');
 });
