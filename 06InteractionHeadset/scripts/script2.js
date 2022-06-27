@@ -18,9 +18,6 @@ myOtherBox.addEventListener('mouseenter', function(){
 
 myOtherBox.addEventListener('mouseleave', function(){
 	rotationSpeed = 0.001;
-	myOtherBox.object3D.scale.x *= 0.5;
-	myOtherBox.object3D.scale.y *= 0.5;
-	myOtherBox.object3D.scale.z *= 0.5;
 	console.log('left');
 });
 
