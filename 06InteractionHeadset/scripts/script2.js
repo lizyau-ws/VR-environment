@@ -47,10 +47,10 @@ function grow2(){
 	myBox.object3D.scale.y *= growspeed;
 	myBox.object3D.scale.z *= growspeed;
 	
-	rotationSpeed = 0.001;
-	myOtherBox.object3D.scale.x *= 0.5;
-	myOtherBox.object3D.scale.y *= 0.5;
-	myOtherBox.object3D.scale.z *= 0.5;
+	rotationSpeed = 0.1;
+	myBox.object3D.rotate.x *= 0.5;
+	myBox.object3D.rotate.y *= 0.5;
+	myBox.object3D.rotate.z *= 0.5;
 	
 	//console.log(myOtherBox.object3D.scale);
 }
